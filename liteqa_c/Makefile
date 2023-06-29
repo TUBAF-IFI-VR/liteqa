@@ -1,8 +1,8 @@
 liteqa_c.so: liteqa_c.cpp Makefile
-	gcc -fPIC -lstdc++ -shared -o liteqa_c.so liteqa_c.cpp
+	gcc -Wc++11-extensions -fPIC -lstdc++ -shared -o liteqa_c.so liteqa_c.cpp
 
 liteqa_c: liteqa_c.cpp Makefile
-	g++ -DLITEQA_C_MAIN -fPIC -lstdc++ -o liteqa_c liteqa_c.cpp
+	g++ -Wc++11-extensions -DLITEQA_C_MAIN -fPIC -lstdc++ -o liteqa_c liteqa_c.cpp
 
 clean:
 	rm -f liteqa_c.o

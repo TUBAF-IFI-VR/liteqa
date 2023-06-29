@@ -70,7 +70,7 @@ extern "C" {
 	)
 	{	// ENCODE INDEX
 		LISQ_INITIALIZE;
-		std::vector<std::pair<int, int>> step(num);
+		std::vector< std::pair<int, int> > step(num);
 		int j = 0;
 		for (int i = 0; i < num; i++)
 		{
