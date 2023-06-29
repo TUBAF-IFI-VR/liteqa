@@ -177,7 +177,7 @@ For further description of the command line query tool refer to `example/query.s
 
 ## `liteqa` ParaView Plugin -- `lqaPlugin.py`
 
-The *count query*, *index query*, and *grid query* as described in [Ref1]() are implemented as data producers for the ParaView Pipeline in `lqaPlugin.py`.
+The *count query*, *index query*, and *grid query* as described in the `liteqa` Features are implemented as data producers for the ParaView Pipeline in `lqaPlugin.py`.
 The plugin is used directly inside the GUI of the ParaView application.
 
 For further description of the plugin refer to `example/plugin.py`
