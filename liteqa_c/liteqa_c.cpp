@@ -480,12 +480,12 @@ extern "C" {
 		pts_ptr += 3*skip_len;
 		data_ptr += skip_len;
 		int binn = -1;
-		for (int j = 0; j < bsel; j++)
+		for (size_t j = 0; j < bsel; j++)
 		{
 			binn += *(binn_ptr + *bidx_ptr) + 1;
 			double x = LISQ_STEPFUN(binn);
 			int i_last = -1;
-			for (int i = 0; i < *(bins_ptr + *bidx_ptr); i++)
+			for (unsigned i = 0; i < *(bins_ptr + *bidx_ptr); i++)
 			{
 				i_last += *bini_ptr++ + 1;
 				int pos = *(hmap + i_last);
@@ -516,7 +516,7 @@ extern "C" {
 		const unsigned* bini_ptr
 	)
 	{	// INTERSECT POINT INDICES
-		std::vector<std::pair<unsigned, int>> data(seln);
+		std::vector< std::pair<unsigned, int> > data(seln);
 		auto data_ptr = data.begin();
 		for (int j = 0; j < bsel; j++)
 		{
