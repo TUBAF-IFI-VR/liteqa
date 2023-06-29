@@ -1,0 +1,34 @@
+MDEXT=\
+all_symbols_escapable+\
+intraword_underscores+\
+escaped_line_breaks+\
+space_in_atx_header+\
+lists_without_preceding_blankline+\
+inline_code_attributes+\
+strikeout+\
+yaml_metadata_block+\
+pipe_tables+\
+line_blocks+\
+implicit_figures+\
+abbreviations+\
+inline_notes+\
+bracketed_spans+\
+native_divs+\
+native_spans+\
+footnotes
+
+
+rm -rf *.pdf
+
+pandoc \
+improve.md    \
+gridlin.md    \
+floatquant.md \
+gridcom.md    \
+indexcom.md   \
+lqaformat.md  \
+--filter pandoc-xnos \
+--citeproc \
+--from=markdown+raw_tex+$MDEXT \
+-o ../compress.pdf
+
