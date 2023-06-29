@@ -84,8 +84,35 @@ cd liteqa/example/
 
 Third, generate visualization in ParaView interactive GUI:
 ```
-TODO
+cd liteqa/example
+paraview --state plugin.py
 ```
+
+---
+
+# `liteqa` Features
+
+## Count Query
+
+ParaView filters `lqaTable` and `lqaHistogram` implement the fast retrieval of Index Meta Data for Counting, Histograms and Statistics.
+
+![docs/features/lqaHistogram.png]
+
+## Index Query
+
+ParaView filters `lqaPoints` and `lqaQuery` implement the fast retrieval of points from an index based on range conditions.
+
+![docs/features/lqaPoints.png]
+
+`lqaGrid` decompresses a grid containing the geometry of the fluid domain as context.
+
+## Grid Query
+
+ParaView Filters `lqaQuery` in combination with `lqaRegions` and `lqaBlock` perform partial decompression of a grid based on point locations retrieved from an index.
+
+![docs/features/lqaBlock.png.png]
+
+`lqaEuclideanClustering` and `lqaClusterSelect` allow to focus on one region in the dcompressed results.
 
 ---
 
