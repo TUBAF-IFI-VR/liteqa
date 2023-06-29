@@ -92,6 +92,18 @@ paraview --state plugin.py
 
 # `liteqa` Features
 
+## VTI Compression
+
+Existing cubic `vti` datasets can be compressed and indexed using `vti2liteqa.py`.
+
+![](docs/features/vti2liteqa.png)
+
+## Command Line Query
+
+Compressed indices can be queried using `lqaquery.py`.
+
+![](docs/features/lqaquery.png)
+
 ## Count Query
 
 ParaView filters `lqaTable` and `lqaHistogram` implement the fast retrieval of Index Meta Data for Counting, Histograms and Statistics.
