@@ -1,4 +1,4 @@
-# `liteqa` -- Lossy In-Situ Tabular Encoding for Query-Driven Analytics
+# Lossy In-Situ Tabular Encoding for Query-Driven Analytics
 
 This is the reference implementation of `liteqa`, as applied in the Virtual Prototyping Scenario described in [Ref1]().
 
@@ -7,7 +7,7 @@ This is the reference implementation of `liteqa`, as applied in the Virtual Prot
 
 > *Computer-Aided Design of Metal Melt Filters: Geometric Modifications of Open-Cell Foams, Effective Hydraulic Properties and Filtration Performance*; Henry Lehmann, Eric Werzner, Alexander Malik, Martin Abendroth, Subhashis Ray, Bernhard Jung; AEM Journal, Volume 24, Issue 2, February 2022, Page 2100878
 
-> * Multifunctional Ceramic Filter Systems for Metal Melt Filtration: Towards Zero-Defect Materials*; Edited by:
+> *Multifunctional Ceramic Filter Systems for Metal Melt Filtration: Towards Zero-Defect Materials*; Edited by:
 Christos G. Aneziris and Horst Biermann, released in 2023, ISBN: *to come*
 
 `liteqa` is a data compression utility with integrated indexing for query-driven analytics on compressed data.
@@ -28,8 +28,8 @@ The latest implementation of the `liteqa` compression and the `liteqa` data form
 
 1. example data `data1/2.vti` and scripts `compress.sh`, `query.sh` and `plugin.py`
 2. compression of vtkImageData using `vti2liteqa.py` on the command line
-3. perform queries in indices using `lqaquery.py` on the command line
-4. ParaView Plugin for performing `liteqa` queries in an interactive GUI
+3. perform queries on compressed indices using `lqaquery.py` on the command line
+4. ParaView Plugin for generating visualization based on `liteqa` queries in an interactive GUI
 
 ---
 
@@ -52,23 +52,23 @@ data1.lqa/vel1.g |28.81%|Grid |Velocity Field Component 1
 data1.lqa/vel2.g |29.21%|Grid |Velocity Field Component 2
 data1.lqa/obs.g  |3.05% |Grid |Fluid Domain Geometry
 
-The example is run without installing `liteqa` in the system.
-First, compile `liteqa` shared object.
-```bash
-cd liteqa/liteqa_c/
-make
-```
+The example can be run without installing `liteqa` in the system.
 
-Second, generate compressed indexes and grids using the following commands:
+First, generate compressed indexes and grids using the following commands:
 ```bash
 cd liteqa/example/
 ./compress.sh
 ```
 
-Third, perform queries on the example data using the following commands:
+Second, perform queries on the example data using the following commands:
 ```bash
 cd liteqa/example/
 ./query.sh
+```
+
+Third, generate visualization in ParaView interactive GUI:
+```
+TODO
 ```
 
 ---
@@ -118,7 +118,7 @@ For further description of the command line compressor refer to `example/compres
 
 For further description of the command line query tool refer to `example/query.sh`.
 
-## `liteqa` ParaView Plugin
+## `liteqa` ParaView Plugin -- `lqaPlugin.py`
 
 The *count query*, *index query*, and *grid query* as described in [Ref1]() are implemented as data producers for the ParaView Pipeline in `lqaPlugin.py`.
 The plugin is used directly inside the GUI of the ParaView application.
