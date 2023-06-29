@@ -52,7 +52,22 @@ data1.lqa/vel1.g |28.81%|Grid |Velocity Field Component 1
 data1.lqa/vel2.g |29.21%|Grid |Velocity Field Component 2
 data1.lqa/obs.g  |3.05% |Grid |Fluid Domain Geometry
 
-The example can be run without installing `liteqa` in the system.
+Before running the example, `liteqa` must be installed in the local system:
+```bash
+cd liteqa
+pip install .
+```
+
+The example can be run without installing `liteqa` in the system, but then the dependencies must be installed manually:
+```bash
+pip install pyfastpfor
+pip install zstd
+pip install hilbertcurve
+pip install numpy
+```
+
+Before running the example the Python `paraview` module must be installed.
+See section Install below for how to install ParaView.
 
 First, generate compressed indexes and grids using the following commands:
 ```bash
@@ -93,10 +108,12 @@ Dependencies are installed by pip as required:
 The compilation is done using python `distutils`.
 The shared object is loaded and executed using python `ctypes`.
 
-`liteqa` requires Paraview.
-The stable binary version of ParaView from the [ParaView website](https://www.paraview.org/) can be used, **only if** it uses the system site-packages of the default `python3` interpreter.
-Otherwise, ParaView must be installed using a package manager, or it must be compiled from source in order to find the `liteqa` python package installed in the local system.
-When using the binary version from the website or manual compilation, make sure that the `pvpython` executable is accessible in the PATH.
+`liteqa` requires ParaView.
+ParaView is not in the dependencies list of the `liteqa` pip package, because sometimes it is installed manually.
+There are three ways ParaView can be installed:
+1. Install paraview using pip: `pip install paraview`
+2. Install ParaView using a package manager, or compile it from source in order to find the `liteqa` python package installed in the local system.
+3. The stable binary version of ParaView from the [ParaView website](https://www.paraview.org/) can be used, **only if** it uses the system site-packages of the default `python3` interpreter.
 
 ---
 
