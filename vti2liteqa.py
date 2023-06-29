@@ -1,4 +1,4 @@
-#!/usr/bin/env pvpython
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import os

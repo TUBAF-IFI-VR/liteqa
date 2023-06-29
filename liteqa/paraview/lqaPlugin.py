@@ -206,7 +206,7 @@ class lqaQuery(lqaBase):
 	def RequestData(self, request, inInfo, outInfo):
 		if self.Files is None: return 1	#< quiet_failure
 		outData = self.GetOutputData(outInfo, 0)	#< preallocated data in output port
-		res = self.LiteQA.get_index_ranges(self.Files, xrngs=self.Range, xopts=self.Optis, invs=self.Invts)
+		res = self.LiteQA.get_index_ranges(self.Files, xrngs=self.Range, xopts=self.Optis, invs=self.Invts, values=True, points=True)
 		if res is None: return 1	#< failure
 		size, xrngs, data, points = res
 		if len(points) > 0:

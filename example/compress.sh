@@ -40,12 +40,12 @@ function run() {
 	## GENERATE COMPRESSED GRID
 
 	# generate compressed grid for flow field vectors
-	../vti2liteqa.py --grid --gcube 32 --vtifile $DATA.vti:vel --component 0 --lqadir $DATA.lqa/ --lqaarray vel --check
-	../vti2liteqa.py --grid --gcube 32 --vtifile $DATA.vti:vel --component 1 --lqadir $DATA.lqa/ --lqaarray vel --check
-	../vti2liteqa.py --grid --gcube 32 --vtifile $DATA.vti:vel --component 2 --lqadir $DATA.lqa/ --lqaarray vel --check
+	../vti2liteqa.py --grid --gcube 16 --vtifile $DATA.vti:vel --component 0 --lqadir $DATA.lqa/ --lqaarray vel --check
+	../vti2liteqa.py --grid --gcube 16 --vtifile $DATA.vti:vel --component 1 --lqadir $DATA.lqa/ --lqaarray vel --check
+	../vti2liteqa.py --grid --gcube 16 --vtifile $DATA.vti:vel --component 2 --lqadir $DATA.lqa/ --lqaarray vel --check
 
 	# generate compressed grid for obstacle mask
-	../vti2liteqa.py --zstd --gcube 32 --vtifile $DATA.vti:obs --lqadir $DATA.lqa/ --lqaarray obs --check
+	../vti2liteqa.py --zstd --gcube 16 --vtifile $DATA.vti:obs --lqadir $DATA.lqa/ --lqaarray obs --check
 
 	## COMPRESSION RATE
 	echo "COMPRESSION RATE"
