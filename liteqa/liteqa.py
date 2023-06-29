@@ -26,7 +26,7 @@ HILBMAP = {}	#< hilbert curve cache
 def get_distfile(name):
 	import importlib
 	spec = importlib.util.find_spec("liteqa")
-	return "/".join(spec.origin.split("/")[0:-1]) + "/paraview/" + name
+	return "/".join(spec.origin.split("/")[0:-1]) + "/" + name
 
 def get_array_name(query):
 	query = query.split("/")[-1]
