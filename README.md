@@ -1,8 +1,9 @@
 # Lossy In-Situ Tabular Encoding for Query-Driven Analytics
 
-This is the reference implementation of `liteqa`, as applied in the Virtual Prototyping Scenario described in [Ref1]().
+This is the reference implementation of `liteqa`.
 
-`liteqa` is supposed to run on Linux. MacOS and Windows are not tested yet.
+`liteqa` is supposed to run on Linux. **MacOS and Windows are not tested yet.**
+
 `liteqa` was applied in a virtual prototyping scenario for aluminum metal melt filters with unconventional designs, which is described in [AEM Journal, Volume 24, Issue 2](https://onlinelibrary.wiley.com/doi/10.1002/adem.202100878) and [Springer Book Series in Materials Science by Springer Nature]().
 
 > *Computer-Aided Design of Metal Melt Filters: Geometric Modifications of Open-Cell Foams, Effective Hydraulic Properties and Filtration Performance*; Henry Lehmann, Eric Werzner, Alexander Malik, Martin Abendroth, Subhashis Ray, Bernhard Jung; AEM Journal, Volume 24, Issue 2, February 2022, Page 2100878
